@@ -29,3 +29,17 @@ To Exit the `screen` press
 ```
 CTRL+A+D
 ```
+
+# Use
+Make sure you have install Red Alert 3 and Revora
+
+Edit `%SystemRoot%\System32\drivers\etc\hosts` then add:
+```
+127.0.0.1	files.ea.com
+127.0.0.1	peerchat.server.cnc-online.net
+```
+
+Open Windows Console then execute (Replace `<YOUR VPS IPv4>` with your VPS IPv4)
+```
+netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=6667 connectaddress=<YOUR VPS IPv4> connectport=6668
+```
